@@ -82,4 +82,38 @@ function les_Data_Fra_Fil(filnavn, callback) {
         });
 }
 
+async function les_data(){
+    let tekst = await files[0].text();
+    let array = tekst.split('\n')
+    //body komponent HTML
+    //<input bind:files type="file" on:change={les_data}>
+    //<p class="svar">Svaret er: {svar}</p>
+    //console.log(array)
+}
+
+function summer_array(array) {
+    let sum = 0
+    for (let i = 0; i < array.length; i++) {
+        if (!isNaN(array[i])) {
+            sum += parseFloat(array[i]);
+        }
+    }
+    return sum;
+    //const tall_array = ['1','2','3','4','5']
+    //const total_sum = summer_array(tall_array);
+    //console.log('Total sum:', total_sum);
+}
+
+function kalkulerVekt(masse, tyngdeaks) {
+    const vekt = masse * tyngdeaks
+    const vis_i_rod = tyngdeaks > 9.81;
+    return {
+        vekt: vekt,
+        vis_i_rod: vis_i_rod
+    };
+}
+
+
+
+
 </script>
