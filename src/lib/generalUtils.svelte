@@ -31,6 +31,13 @@ function Standar_kortstokk() {
     return stokk;
 }
 
+function trekk_kort(){
+    if (stokk.lenght === 0) {
+        stokk = Standar_kortstokk();
+    }
+}
+
+
 function array_shuffle(array) {
     while (currentIndex !== 0) {
         randomIndex = Math.floor(Math.random() * currentIndex);
@@ -104,7 +111,7 @@ function summer_array(array) {
     //console.log('Total sum:', total_sum);
 }
 
-function kalkulerVekt(masse, tyngdeaks) {
+function kalkuler_vekt(masse, tyngdeaks) {
     const vekt = masse * tyngdeaks
     const vis_i_rod = tyngdeaks > 9.81;
     return {
@@ -118,19 +125,19 @@ function fakultet(nummer) {
     return nummer * fakultet(nummer - 1);
 }
 
-function kombinerArrays(arr1, arr2) {
+function kombiner_arrays(arr1, arr2) {
     return [...new Set([...arr1, ...arr2])];
 }
 
-function flateUtArray(array) {
+function flate_ut_array(array) {
     return array.reduce((akk, val) => Array.isArray(val) ? akk.concat(flateUtArray(val)) : akk.concat(val), []);
 }
 
-function rotereArray(array, steg) {
+function rotere_array(array, steg) {
     return array.slice(steg).concat(array.slice(0, steg));
 }
 
-function kastTerninger_DnD(input) {
+function kast_terninger_DnD(input) {
     const deler = input.split("d");
     const antallTerninger = parseInt(deler[0], 10);
     const antallSider = parseInt(deler[1], 10);
