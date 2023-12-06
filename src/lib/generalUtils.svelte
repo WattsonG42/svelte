@@ -113,7 +113,33 @@ function kalkulerVekt(masse, tyngdeaks) {
     };
 }
 
+function fakultet(nummer) {
+    if (nummer === 0 || nummer === 1) return 1;
+    return nummer * fakultet(nummer - 1);
+}
 
+function kombinerArrays(arr1, arr2) {
+    return [...new Set([...arr1, ...arr2])];
+}
 
+function flateUtArray(array) {
+    return array.reduce((akk, val) => Array.isArray(val) ? akk.concat(flateUtArray(val)) : akk.concat(val), []);
+}
 
+function rotereArray(array, steg) {
+    return array.slice(steg).concat(array.slice(0, steg));
+}
+
+function kastTerninger_DnD(input) {
+    const deler = input.split("d");
+    const antallTerninger = parseInt(deler[0], 10);
+    const antallSider = parseInt(deler[1], 10);
+    let resultater = [];
+
+    for (let i = 0; i < antallTerninger; i++) {
+        resultater.push(Math.floor(Math.random() * antallSider) + 1);
+    }
+
+    return resultater;
+}
 </script>
