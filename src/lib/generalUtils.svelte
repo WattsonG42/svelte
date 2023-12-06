@@ -1,5 +1,5 @@
 <script>
-function Shuffle_get_Random_Elements(arr, count) {
+function shuffle_get_random_elements(arr, count) {
     
     let shuffled = arr.slice();
     for (let i = shuffled.length - 1; i > 0; i--) {
@@ -10,7 +10,7 @@ function Shuffle_get_Random_Elements(arr, count) {
     return shuffled.slice(0, count);
 }
 
-function get_Random_Number(min_num, max_num) {
+function get_random_number(min_num, max_num) {
     ran_num = Math.floor(Math.random() * (min_num - max_num)) + min_num;
     return ran_num
 }
@@ -149,4 +149,56 @@ function kast_terninger_DnD(input) {
 
     return resultater;
 }
+
+function remove_by_index(array, index) {
+    array.splice(index, 1);
+    return array;
+}
+
+function add_to_end(array, element) {
+    array.push(element);
+    return array;
+}
+
+function add_to_start(array, element) {
+    array.unshift(element);
+    return array;
+}
+
+function remove_by_value(array, value) {
+    return array.filter(element => element !== value);
+}
+
+function find_element(array, callback) {
+    return array.find(callback);
+    //EKS
+    // array = [1, 2, 3, 4];
+    // const found = findElement(array, element => element > 2);
+    // console.log(found); output: 3
+}
+
+function merge_arrays(...arrays) {
+    return arrays.flat();
+}
+
+function transformElements(array, transformFunction) {
+    return array.map(transformFunction);
+    //EKS: const filtered = filterArray(array, element => element % 2 === 0);
+}
+
+function filter_array(array, testFunction) {
+    return array.filter(testFunction)
+    //EKS
+    // array = [1, 2, 3, 4];
+    // const filtered = filterArray(array, element => element % 2 === 0);
+    // console.log(filtered); // Output: [2, 4]
+}
+
+function countOccurrences(array, value) {
+    const count = array.reduce((acc, curr) => acc + (curr === value ? 1 : 0), 0);
+    return count;
+}
+
+
+
 </script>
