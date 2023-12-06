@@ -199,6 +199,22 @@ function countOccurrences(array, value) {
     return count;
 }
 
+function manipulateString(str) {
+    console.log(`Original string: ${str}`);
+    console.log(`Length: ${str.length}`);
+    console.log(`Upper case: ${str.toUpperCase()}`);
+    console.log(`Lower case: ${str.toLowerCase()}`);
+    console.log(`Replaced space with dash: ${str.replace(/ /g, '-')}`);
+}
 
+function manipulateArray(arr) {
+    console.log(`Original array: ${arr}`);
+    arr.push('new item');
+    console.log(`After push: ${arr}`);
+    arr.pop();
+    console.log(`After pop: ${arr}`);
+    console.log(`Sorted array: ${arr.sort()}`);
+    console.log(`Reversed array: ${arr.reverse()}`);
+}
 
 </script>
