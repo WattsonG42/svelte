@@ -1,4 +1,4 @@
-// vannautomat.js
+w// vannautomat.js
 
 export class Vannautomat {
   constructor(kapasitet) {
