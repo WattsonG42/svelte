@@ -1,5 +1,5 @@
 <script>
-    import { Vannautomat } from '../../classes/vannautomat.js';
+    import { Vannautomat } from '../../lib/classes/vannautomat.js';
 
     let vannautomat = new Vannautomat(5);
     let hvorMyeVannSomKomUtSist = 0;
