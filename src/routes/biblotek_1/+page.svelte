@@ -1,4 +1,4 @@
-<script>
+    <script>
     import { Bok, Forfatter } from "./literatur";
 
     const mammaMo = new Bok("Mamma Mø");
