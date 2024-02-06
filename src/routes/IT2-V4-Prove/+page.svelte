@@ -35,12 +35,15 @@
     
     let  listeMedOla = [];
     let  listeMedKlasser = [];
+    
     for (let i = 1; i < 11; i++) {
         listeMedOla.push(new Elev(`Ola Nordmann ${i}`, 'Norgestraat 101, 1001 Oslo', `ola.nordmann${i}@eksempel.no`))
     }
+  
     for (let i = 1; i < 6; i++) {
         listeMedKlasser.push(new Klasse(`ST${i}`,  `VG${i}`, listeMedOla))
     }
+ 
     const askervgs = new Skole('Asker VGS', listeMedKlasser, 'Fredtunveien') 
     // console.log(listeMedKlasser[0])
 </script>
